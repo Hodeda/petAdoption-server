@@ -10,7 +10,14 @@ const MongoPass = process.env.DATABASE_PASS;
 
 const userRouter = require("./routes/userRoutes");
 const petsRouter = require("./routes/petRoutes");
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://pet-adoption-client-pearl.vercel.app/",
+    ],
+  })
+);
 app.use(express.json());
 
 const db = mongoose
