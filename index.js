@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://pet-adoption-client-pearl.vercel.app/",
+      "https://pet-adoption-client-pearl.vercel.app",
     ],
   })
 );
